@@ -6,7 +6,7 @@ window.addEventListener('load', async () => {
         await window.ethereum.request({ method: 'eth_requestAccounts' });
 
         // Define the contract ABI and address
-        const contractABI = [ [
+        const contractABI = [
             {
                 "inputs": [
                     {
@@ -292,7 +292,7 @@ window.addEventListener('load', async () => {
                 "stateMutability": "view",
                 "type": "function"
             }
-        ] ];
+        ];
         const contractAddress = '0x83d3FE497AaBcb8c065CFeC53691d5D5b431B0c0'; // Replace with your deployed contract address
 
         const contract = new web3.eth.Contract(contractABI, contractAddress);
